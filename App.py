@@ -2,14 +2,6 @@ import pickle
 from flask import Flask,request,app,jsonify,url_for,render_template,redirect,flash
 import numpy as np
 import pandas as pd
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 app = Flask(__name__)
 # load the model
@@ -43,6 +35,3 @@ def predict():
 
 if __name__=='__main__':
     app.run(debug=True)
-
-
-
